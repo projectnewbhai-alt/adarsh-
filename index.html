@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aman Jewellers Billing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async></script>
+    <script src="https://apis.google.com/js/api.js" async></script>
+    <style>
+      @media print {
+        body {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+          background: white !important;
+        }
+
+        /* Hide everything on the page by default */
+        body * {
+          visibility: hidden;
+        }
+        
+        /* Then, make the invoice container and all its children visible */
+        #invoice-preview, #invoice-preview * {
+          visibility: visible;
+        }
+
+        /* Position the invoice to fill the printable area */
+        #invoice-preview {
+          position: absolute;
+          left: 0;
+          top: 0;
+          margin: 0;
+          padding: 0.5in; /* Add a standard margin */
+          width: 100%;
+          height: auto;
+          box-shadow: none !important;
+          border: none !important;
+          background: white !important; /* Override dark theme for printing */
+        }
+        
+        /* Ensure elements specifically marked as no-print are fully removed */
+        .no-print {
+            display: none !important;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/"
+  }
+}
+</script>
+</head>
+  <body class="bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-white transition-colors duration-300">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

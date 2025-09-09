@@ -1,0 +1,7 @@
+{
+  "name": "Billing Software",
+  "description": "A sophisticated billing application for Aman Jewellers to create invoices for gold and silver items, featuring live rate fetching and printable invoice generation.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
